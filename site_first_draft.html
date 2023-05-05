@@ -42,6 +42,7 @@
                 grid-column-end: 4;
             }
             section{
+                color: aliceblue;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -50,72 +51,17 @@
                 padding: 100px 20vw;
             }
 
-            .blue {
-                background: #3c31dd;
+            .hidden{
+                opacity: 0;    
+                filter: blur(5px);
+                transform: translateX(-100%);
+                transition: all 5s;
             }
 
-            .red {
-                background: #dd3f31;
-            }
-
-            .pink{
-                background: #ff0066;
-            }
-
-            .black{
-                background: black;
-            }
-
-            .bubble::after{
-                content:" ";
-                border-top-left-radius: 110%;
-                border-top-right-radius: 110%;
-                position: absolute;
-                bottom: 0;
-                height: 85%;
-                width: 100%;
-                background-color: black;
-                z-index: -1;
-            }
-
-            .wave {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                overflow: hidden;
-                line-height: 0;
-            }
-
-            .wave svg {
-                position: relative;
-                display: block;
-                width: calc(100% + 1.3px);
-                height: 200px;
-            }
-
-            .wave .shape-fill {
-                fill: #000000;
-            }
-
-            .curve {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                overflow: hidden;
-                line-height: 0;
-            }
-
-            .curve svg {
-                position: relative;
-                display: block;
-                width: calc(100% + 1.3px);
-                height: 226px;
-            }
-
-            .curve .shape-fill {
-                fill: #3C31DD;
+            .show{
+                opacity: 1;
+                filter: blur(0);
+                transform: translateX(0%);
             }
 
             .footer{
@@ -138,54 +84,35 @@
                     <a class="cta" href="#"><button>Contact</button></a>
                 </div>
                 <div class="content-large">
-                    <section class="red">
+                    <section class="hidden">
                         <h1>The One Piece is real</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quis possimus facere consectetur assumenda, doloremque, porro voluptatum fuga placeat quibusdam quas. Sequi consequatur laudantium, sit in libero velit sed quisquam.</p>
-
-                        <div class="curve">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                                <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
-                            </svg>
-                        </div>
                     </section>
-                    <section class="blue">
+                    <section class="hidden">
                         <h1>The One Piece is real</h1>
                         <p>Facilis nulla aperiam aspernatur sunt? Sed officia, esse ipsum rem temporibus aut incidunt modi reprehenderit? Laudantium veniam ipsam a repellendus, mollitia iusto quos. Nisi laborum et, sed iusto numquam ipsam!</p>
                     </section>
-                    <section>
+                    <section class="hidden">
                         <h1>The One Piece is real</h1>
                         <p>Veritatis asperiores voluptatum praesentium nihil amet sed reiciendis? Debitis nostrum, porro culpa nemo eaque possimus voluptatibus magnam laudantium saepe. A, velit quas? Quas nesciunt blanditiis assumenda modi eligendi fugiat voluptas.</p>
                     </section>
-                    <section class="pink">
-                        <h1>The One Piece is real</h1>
-                        <p>Quo aliquam voluptas debitis expedita, ipsum quia nam repudiandae porro vitae delectus ullam, consequatur asperiores perspiciatis totam, natus reiciendis nostrum voluptates repellendus obcaecati nihil! Reiciendis ratione earum omnis delectus enim!</p>
-                    </section>
-                    <section class="bubble">
+                    <section class="hidden">
                         <h1>The One Piece is real</h1>
                         <p>Est doloremque tempora exercitationem temporibus aspernatur, quas, dolor deleniti non facilis velit repellendus sunt eius optio voluptates omnis, ad a voluptatibus ut animi facere? Asperiores harum voluptatum facilis error vitae.</p>
                     </section>
-                    <section class="black">
+                    <section class="hidden">
                         <h1>The One Piece is real</h1>
                         <p>Quos voluptatum aut soluta distinctio deleniti cumque porro tempora facere ratione maxime eaque mollitia repellendus quis harum itaque amet laboriosam totam, voluptatibus perspiciatis pariatur suscipit molestias? Recusandae facilis optio illo.</p>
                     </section>
-                    <section class="blue">
+                    <section class="hidden">
                         <h1>The One Piece is real</h1>
                         <p>Architecto, debitis iusto tempora repellat nesciunt culpa? Accusamus atque sequi maiores qui iure minima ipsam, culpa nesciunt soluta recusandae tenetur dolores nisi sed vel dolor quidem nulla iste. Excepturi, rerum.</p>
-
-                        <div class="wave">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-                            </svg>
-                        </div>
-                    </section>
-                    <section class="red">
-                        <h1>The One Piece is real</h1>
-                        <p>Magnam facilis odit sapiente unde ullam nemo sit laborum doloribus incidunt illum cum, porro, eveniet, nihil aliquid. Obcaecati, placeat consectetur aliquid minus possimus asperiores atque hic explicabo cum veritatis dignissimos?</p>
                     </section>
                 </div>
                 <div class="footer">Footer</div>
             </div>
         </main>
+        <script src="app.js" defer></script>    
     </body>
 </html>
     

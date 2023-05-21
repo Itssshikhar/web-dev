@@ -1,15 +1,3 @@
-/* for the blob animation */
-
-const blob = document.getElementById("blob");
-
-document.body.onpointermove = event => {
-    const { clientX , clientY } = event;
-    blob.animate({
-        left: `${clientX}px`,
-        top: `${clientY}px`
-    }, { duration: 3000, fill: "forwards" });
-}
-
 /* for the text-animation */
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -40,3 +28,18 @@ document.querySelector("h1").onmouseover = event => {
     iteration += 1 / 3;
   }, 30);
 }
+
+/* Enables hidden nav bar */
+
+const nav = document.querySelector("visible-on-scroll");
+const lastScrollY = window.scrollY;
+
+window.addEventListener("scroll" , () => {
+  if (lastScrollY < window.scrollY) {
+    nav.classList.add("nav-hidden");
+  } else {
+    nav.classList.remove("nav-hidden");
+  }
+
+  lastScrollY = window.scrollY;
+});
